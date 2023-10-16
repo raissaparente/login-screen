@@ -20,6 +20,7 @@
             <i class="fa-solid fa-user input-icon"></i>
             <input type="text" name="username" id="username" class="input-field" placeholder="Digite seu email">
         </div>
+
         <div class="input-container">
             <i class="fa-solid fa-lock input-icon"></i>
             <input type="password" name="password" id="password" class="input-field" placeholder=" Digite sua senha">
@@ -27,29 +28,30 @@
         </div>
 
         <div class="pwd-recovery">
-            <input type="checkbox" name="lembrar" id="lembrar">
-            <label id="lembreme" for="checkbox">Lembre-me</label>
+            <label id="lembreme" for="lembrar">
+                <input type="checkbox" name="lembrar" id="lembrar">
+                Lembre-me
+            </label>
             <a href="#">Esqueci minha senha</a>
         </div>
 
         <button type="submit">Entrar</button>
 
-        <a href="#">Não tem uma conta? <b>Registre-se</b></a>
-
-        <script>
-            const eye = document.getElementById('eye')
-            const pwd = document.getElementById('password')
-            eye.addEventListener('click', () => {
-                if (pwd.type === "password") {
-                    pwd.type = "text"
-                    eye.classList.replace('fa-eye-slash', 'fa-eye') 
-                } else {
-                    pwd.type = "password"
-                    eye.classList.replace('fa-eye', 'fa-eye-slash')
-                }
-            })
-        </script>
-        
+        <a href="#">Não tem uma conta? <b>Registre-se</b></a>  
     </main>
+
+    <script>
+        const eye = document.getElementById('eye')
+        const pwd = document.getElementById('password')
+        eye.addEventListener('click', () => {
+            if (pwd.type === "password") {
+                pwd.type = "text"
+                eye.classList.replace('fa-eye-slash', 'fa-eye') 
+            } else {
+                pwd.type = "password"
+                eye.classList.replace('fa-eye', 'fa-eye-slash')
+            }
+        })
+    </script>
 </body>
 </html>
